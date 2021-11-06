@@ -15,7 +15,7 @@ const initalState: InitalState = {
 };
 
 /* 리듀서 */
-function counter(state = initalState, action) {
+function counter(state = initalState, action: { [property: string]: any }) {
   switch (action.type) {
     case INCREASE:
       return {
@@ -23,7 +23,7 @@ function counter(state = initalState, action) {
       };
     case DECREASE:
       return {
-        number: state.number + 1,
+        number: state.number - 1,
       };
     default:
       return state;

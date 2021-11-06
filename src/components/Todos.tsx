@@ -22,12 +22,15 @@ const Todos = ({
   onToggle,
   onRemove,
 }: TodosProps) => {
-  const onSubmit = (e) => {
+  const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
   return (
     <div>
-      <form></form>
+      <form>
+        <input type="text" />
+        <button type="submit">등록</button>
+      </form>
     </div>
   );
 };
