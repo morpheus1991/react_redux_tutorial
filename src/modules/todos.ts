@@ -1,4 +1,4 @@
-import { TodoItem, TodoList } from "../structure";
+import { ITodoItem, TodoList } from "../structure";
 
 /* 엑션 타입 정의 */
 const CHANGE_INPUT = "todos/CHANGE_INPUT";
@@ -16,7 +16,7 @@ export const changeInput: ChangeInput = (input: string) => ({
   input,
 });
 
-type Insert = (text: string) => { type: string; todo: TodoItem };
+type Insert = (text: string) => { type: string; todo: ITodoItem };
 export const insert: Insert = (text) => ({
   type: INSERT,
   todo: {

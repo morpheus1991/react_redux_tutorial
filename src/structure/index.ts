@@ -1,16 +1,16 @@
-export interface TodoItem {
+export interface ITodoItem {
   id: string | number;
   text: string;
   done: boolean;
 }
 
-export type TodoList = TodoItem[];
+export type TodoList = ITodoItem[];
 
 export interface TodosProps {
   input: string;
   todos: TodoList;
-  onChangeInput: Function;
-  onInsert: Function;
-  onToggle: Function;
-  onRemove: Function;
+  changeInput: Function;
+  insert: Function;
+  toggle: Function;
+  remove: Function;
 }
